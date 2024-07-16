@@ -18,12 +18,11 @@ class Solution {
         return (int)ans;
         */
 
-        /* Binary Search Apprach */
+        /* Binary Search Approach */
         int low = 1, high = x;
         while(low <= high){
             long mid = low + (high - low)/2;
-            long mul = mid * mid;
-            if(mul <= x){
+            if((long)(mid * mid) <= (long)x){
                 low = (int)(mid+1);
             }
             else{
