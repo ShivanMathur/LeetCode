@@ -4,8 +4,7 @@ class Solution {
 
         while(low <= high){
             int mid = low + (high-low)/2;
-            int time = eatingTime(piles, mid);
-            if(time <= h){
+            if(eatingTime(piles, mid, h)){
                 high = mid-1;
             }
             else{
@@ -26,12 +25,12 @@ class Solution {
         }
         return max;
     }
-    static int eatingTime(int[] piles, int num){
+    static boolean eatingTime(int[] piles, int num, int h){
         int time = 0;
         for(int i=0; i<piles.length; i++){
             time += Math.ceil((double)piles[i]/(double)num);
         }
 
-        return time;
+        return time <= h;
     }
 }
