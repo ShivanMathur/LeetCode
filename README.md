@@ -34,13 +34,43 @@
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0073-set-matrix-zeroes"> S </a></td>
+    <td> Merge Sorted Array </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0088-merge-sorted-array"> Merge Sorted Array </a></td>
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0073-set-matrix-zeroes"> S </a></td>
+    <td> Remove Element </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0027-remove-element"> Remove Element </a></td>
+  </tr>
+
+  <tr>
+    <td> Remove Duplicates from Sorted Array </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0026-remove-duplicates-from-sorted-array"> Remove Duplicates from Sorted Array </a></td>
+  </tr>
+
+  <tr>
+    <td> Remove Duplicates from Sorted Array II </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0080-remove-duplicates-from-sorted-array-ii"> Remove Duplicates from Sorted Array II </a></td>
+  </tr>
+
+  <tr>
+    <td> Majority Element </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0169-majority-element"> Majority Element </a></td>
+  </tr>
+
+  <tr>
+    <td> Rotate Array </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0189-rotate-array"> Rotate Array </a></td>
+  </tr>
+
+  <tr>
+    <td> Best Time to Buy and Sell Stock </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0121-best-time-to-buy-and-sell-stock"> Best Time to Buy and Sell Stock </a></td>
+  </tr>
+
+  <tr>
+    <td> Roman to Integer </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0013-roman-to-integer"> Roman to Integer </a></td>
   </tr>
 
   </table>
@@ -98,44 +128,7 @@
     <td> Two Sum II - Input Array Is Sorted </td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted"> Two Sum II - Input Array Is Sorted </a></td>
   </tr>
-
-  <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
-  </tr>
-
-  <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
-  </tr>
-
-  <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
-  </tr>
-
-  <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
-  </tr>
-
-  <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
-  </tr>
-
-  <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
-  </tr>
-
-  <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
-  </tr>
-
-
-  
+ 
 </table>
 
 
@@ -177,15 +170,64 @@
     <td> Rotate Image </td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0048-rotate-image"> Rotate Image </a></td>
   </tr>
+
+  <tr>
+    <td> Spiral Matrix </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0054-spiral-matrix"> Spiral Matrix </a></td>
+  </tr>
   
 </table>
 
+<h2> HashMap </h2>
+
+<table>
+ <tr>
+    <td> Isomorphic Strings </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0205-isomorphic-strings"> Isomorphic Strings </a></td>
+  </tr>
+
+  <tr>
+    <td> Word Pattern </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0290-word-pattern"> Word Pattern </a></td>
+  </tr>
+
+  <tr>
+    <td> Group Anagrams </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0049-group-anagrams"> Group Anagrams </a></td>
+  </tr>
+
+  <tr>
+    <td> Ransom Note </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0383-ransom-note"> Ransom Note </a></td>
+  </tr>
+</table>
 
 
+<h2> Intervals </h2>
 
+<h2>Linked List </h2>
 
+<table>
+ <tr>
+    <td>  </td>
+    <td> <a href=""> I </a></td>
+  </tr>
 
-<h2>Linked Lists</h2>
+ <tr>
+    <td>  </td>
+    <td> <a href=""> I </a></td>
+  </tr>
+</table>
 
-<h2>Binary Search</h2>
+<h2>Binary Search </h2>
+<table>
+ <tr>
+    <td>  </td>
+    <td> <a href=""> I </a></td>
+  </tr>
 
+ <tr>
+    <td>  </td>
+    <td> <a href=""> I </a></td>
+  </tr>
+</table>
