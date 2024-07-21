@@ -4,6 +4,10 @@
 
 <table>
  <tr>
+    <td> Check if Array Is Sorted and Rotated </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/1752-check-if-array-is-sorted-and-rotated"> Check if Array Is Sorted and Rotated </a></td>
+  </tr>
+ <tr>
     <td>Contains Duplicate</td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0217-contains-duplicate"> Contains Duplicate </a></td>
   </tr>
@@ -73,7 +77,24 @@
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0013-roman-to-integer"> Roman to Integer </a></td>
   </tr>
 
+  <tr>
+    <td> Max Consecutive Ones </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0485-max-consecutive-ones"> Max Consecutive Ones </a></td>
+  </tr>
+ <tr>
+
   </table>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <h2>Two Pointers</h2>
@@ -128,8 +149,39 @@
     <td> Two Sum II - Input Array Is Sorted </td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted"> Two Sum II - Input Array Is Sorted </a></td>
   </tr>
+
+  <tr>
+    <td> Rearrange Array Elements by Sign </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/2149-rearrange-array-elements-by-sign"> Rearrange Array Elements by Sign </a></td>
+  </tr>
+
+  <tr>
+    <td> Next Permutation </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0031-next-permutation"> Next Permutation </a></td>
+  </tr>
+
+  <tr>
+    <td> Pascal's Triangle </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0118-pascals-triangle"> Pascal's Triangle </a></td>
+  </tr>
+
+  <tr>
+    <td> Majority Element II </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0229-majority-element-ii"> Majority Element II </a></td>
+  </tr>
  
 </table>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <h2>Sliding Window</h2>
@@ -158,6 +210,32 @@
 </table>
 
 
+
+
+
+
+<h2> Prefix Sum </h2>
+
+<table>
+  <tr>
+    <td> Subarray Sum Equals K </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0560-subarray-sum-equals-k"> Subarray Sum Equals K </a></td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2>Matrix</h2>
 
 <table>
@@ -177,6 +255,21 @@
   </tr>
   
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h2> HashMap </h2>
 
@@ -203,7 +296,38 @@
 </table>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <h2> Intervals </h2>
+
+<table>
+ <tr>
+    <td> Merge Intervals </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0056-merge-intervals"> Merge Intervals </a></td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h2>Linked List </h2>
 
@@ -219,15 +343,76 @@
   </tr>
 </table>
 
+
+
+
+
+
+
 <h2>Binary Search </h2>
 <table>
  <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
+    <td> Binary Search </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0704-binary-search"> Binary Search </a></td>
   </tr>
 
  <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
+    <td> Search Insert Position </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0035-search-insert-position"> Search Insert Position </a></td>
   </tr>
+
+  <tr>
+    <td> Find First and Last Position of Element in Sorted Array </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0034-find-first-and-last-position-of-element-in-sorted-array"> Find First and Last Position of Element in Sorted Array </a></td>
+  </tr>
+  
+  <tr>
+    <td> Search in Rotated Sorted Array </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0033-search-in-rotated-sorted-array"> Search in Rotated Sorted Array </a></td>
+  </tr>
+
+  <tr>
+    <td> Search in Rotated Sorted Array II </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0081-search-in-rotated-sorted-array-ii"> Search in Rotated Sorted Array II </a></td>
+  </tr>
+
+  <tr>
+    <td> Find Minimum in Rotated Sorted Array </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0153-find-minimum-in-rotated-sorted-array"> Find Minimum in Rotated Sorted Array </a></td>
+  </tr>
+  <tr>
+    <td> Single Element in a Sorted Array </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0540-single-element-in-a-sorted-array"> Single Element in a Sorted Array </a></td>
+  </tr>
+
+  <tr>
+    <td> Find Peak Element </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0162-find-peak-element"> Find Peak Element </a></td>
+  </tr>
+
+  <tr>
+    <td> Koko Eating Bananas </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0875-koko-eating-bananas"> Koko Eating Bananas </a></td>
+  </tr>
+
+  <tr>
+    <td> Minimum Number of Days to Make m Bouquets </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/1482-minimum-number-of-days-to-make-m-bouquets"> Minimum Number of Days to Make m Bouquets </a></td>
+  </tr>
+
+  <tr>
+    <td> Find the Smallest Divisor Given a Threshold </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/1283-find-the-smallest-divisor-given-a-threshold"> Find the Smallest Divisor Given a Threshold </a></td>
+  </tr>
+
+  <tr>
+    <td> Capacity To Ship Packages Within D Days </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/1011-capacity-to-ship-packages-within-d-days"> Capacity To Ship Packages Within D Days </a></td>
+  </tr>
+
+  <tr>
+    <td> Kth Missing Positive Number </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/1539-kth-missing-positive-number"> Kth Missing Positive Number </a></td>
+  </tr>
+
 </table>
