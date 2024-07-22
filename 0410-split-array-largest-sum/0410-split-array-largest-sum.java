@@ -4,11 +4,9 @@ class Solution {
             return -1;
         }
 
-        int low = 0, high = 0;
+        int low = nums[0], high = 0;
         for(int i=0; i<nums.length; i++){
-            if(nums[i]>low){
-                low = nums[i];
-            }
+            low = Math.max(low, nums[i]);
             high += nums[i];
         }
 
@@ -35,6 +33,6 @@ class Solution {
                 sum = nums[i];
             }
         }
-        return (arrSize == k);
+        return (arrSize <= k);
     }
 }
