@@ -420,4 +420,9 @@
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0410-split-array-largest-sum"> Split Array Largest Sum </a></td>
   </tr>
 
+  <tr>
+    <td> Median of Two Sorted Arrays </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0004-median-of-two-sorted-arrays"> Median of Two Sorted Arrays </a></td>
+  </tr>
+
 </table>
