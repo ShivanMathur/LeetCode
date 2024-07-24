@@ -2,13 +2,13 @@ class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         /* Approach 1 
         TC: O(N) + O(log M)
-        */
 
         int n = matrix.length;
         int m = matrix[0].length;
 
         for(int i=0; i<n; i++){
             if(matrix[i][0] <= target && matrix[i][m-1] >= target){
+                
                 // Apply Binary Search
                 int low = 0, high = m-1;
                 while(low <= high){
@@ -27,9 +27,34 @@ class Solution {
         }
 
         return false;
+        */
 
         /* Optimal Approach 
-        TC: O(log2(NxM))
+        TC: O(log(NxM))
         */
+
+        int n = matrix.length;
+        int m = matrix[0].length;
+
+        int low = 0, high = n*m -1;
+
+        while(low <= high){
+            int mid = low + (high - low)/2;
+
+            int row = mid / m;
+            int col = mid % m;
+
+            if(matrix[row][col] == target){
+                return true;
+            }
+            else if(matrix[row][col] < target){
+                low = mid + 1;
+            }
+            else{
+                high = mid - 1;
+            }
+        }
+
+        return false;
     }
 }
