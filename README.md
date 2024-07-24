@@ -341,6 +341,7 @@
     <td>  </td>
     <td> <a href=""> I </a></td>
   </tr>
+  
 </table>
 
 
@@ -364,6 +365,11 @@
   <tr>
     <td> Find First and Last Position of Element in Sorted Array </td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0034-find-first-and-last-position-of-element-in-sorted-array"> Find First and Last Position of Element in Sorted Array </a></td>
+  </tr>
+
+  <tr>
+    <td> Peak Index in a Mountain Array </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0852-peak-index-in-a-mountain-array"> Peak Index in a Mountain Array </a></td>
   </tr>
   
   <tr>
@@ -423,6 +429,16 @@
   <tr>
     <td> Median of Two Sorted Arrays </td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0004-median-of-two-sorted-arrays"> Median of Two Sorted Arrays </a></td>
+  </tr>
+
+  <tr>
+    <td> Split Array Largest Sum </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0410-split-array-largest-sum"> Split Array Largest Sum </a></td>
+  </tr>
+
+  <tr>
+    <td> Search a 2D Matrix </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0074-search-a-2d-matrix"> Search a 2D Matrix </a></td>
   </tr>
 
 </table>
