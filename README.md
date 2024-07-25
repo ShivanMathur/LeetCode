@@ -333,11 +333,41 @@
 
 <table>
  <tr>
+    <td> Linked List Cycle </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0141-linked-list-cycle"> Linked List Cycle </a></td>
+  </tr>
+
+ <tr>
+    <td> Linked List Cycle II </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0142-linked-list-cycle-ii"> Linked List Cycle II </a></td>
+  </tr>
+
+  <tr>
+    <td> Add Two Numbers </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0002-add-two-numbers"> Add Two Numbers </a></td>
+  </tr>
+
+  <tr>
+    <td> Merge Two Sorted Lists </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0021-merge-two-sorted-lists"> Merge Two Sorted Lists </a></td>
+  </tr>
+
+  <tr>
+    <td> Remove Nth Node From End of List </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0019-remove-nth-node-from-end-of-list"> Remove Nth Node From End of List </a></td>
+  </tr>
+
+  <tr>
+    <td> Rotate List </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0061-rotate-list"> Rotate List </a></td>
+  </tr>
+
+  <tr>
     <td>  </td>
     <td> <a href=""> I </a></td>
   </tr>
 
- <tr>
+  <tr>
     <td>  </td>
     <td> <a href=""> I </a></td>
   </tr>
