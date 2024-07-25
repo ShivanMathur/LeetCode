@@ -437,13 +437,13 @@
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
+    <td> Search a 2D Matrix II </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0240-search-a-2d-matrix-ii"> Search a 2D Matrix II </a></td>
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href=""> I </a></td>
+    <td> Find a Peak Element II </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/1901-find-a-peak-element-ii"> Find a Peak Element II </a></td>
   </tr>
 
 </table>
