@@ -477,3 +477,27 @@
   </tr>
 
 </table>
+
+<h2>Binary Tree </h2>
+<table>
+ <tr>
+    <td> Binary Tree Preorder Traversal </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0144-binary-tree-preorder-traversal"> Binary Tree Preorder Traversal </a></td>
+  </tr>
+ 
+ <tr>
+    <td> Binary Tree Inorder Traversal </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0094-binary-tree-inorder-traversal"> Binary Tree Inorder Traversal </a></td>
+  </tr>
+
+  <tr>
+    <td> Binary Tree Postorder Traversal </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0145-binary-tree-postorder-traversal"> Binary Tree Postorder Traversal </a></td>
+  </tr>
+
+  <tr>
+    <td> Binary Tree Level Order Traversal </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0102-binary-tree-level-order-traversal"> Binary Tree Level Order Traversal </a></td>
+  </tr>
+ 
+</table>
