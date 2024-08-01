@@ -504,5 +504,10 @@
     <td> Maximum Depth of Binary Tree </td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0104-maximum-depth-of-binary-tree"> Maximum Depth of Binary Tree </a></td>
   </tr>
+
+  <tr>
+    <td> Balanced Binary Tree </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0110-balanced-binary-tree"> Balanced Binary Tree </a></td>
+  </tr>
  
 </table>
