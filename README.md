@@ -509,5 +509,10 @@
     <td> Balanced Binary Tree </td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0110-balanced-binary-tree"> Balanced Binary Tree </a></td>
   </tr>
+
+  <tr>
+    <td> Diameter of Binary Tree </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0543-diameter-of-binary-tree"> Diameter of Binary Tree </a></td>
+  </tr>
  
 </table>
