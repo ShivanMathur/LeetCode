@@ -499,5 +499,10 @@
     <td> Binary Tree Level Order Traversal </td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0102-binary-tree-level-order-traversal"> Binary Tree Level Order Traversal </a></td>
   </tr>
+
+  <tr>
+    <td> Maximum Depth of Binary Tree </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0104-maximum-depth-of-binary-tree"> Maximum Depth of Binary Tree </a></td>
+  </tr>
  
 </table>
