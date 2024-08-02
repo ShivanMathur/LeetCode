@@ -514,5 +514,45 @@
     <td> Diameter of Binary Tree </td>
     <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0543-diameter-of-binary-tree"> Diameter of Binary Tree </a></td>
   </tr>
+
+  <tr>
+    <td> Binary Tree Maximum Path Sum </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0124-binary-tree-maximum-path-sum"> Binary Tree Maximum Path Sum </a></td>
+  </tr>
+
+  <tr>
+    <td> Same Tree </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0100-same-tree"> Same Tree </a></td>
+  </tr>
+
+  <tr>
+    <td>  </td>
+    <td> <a href="">  </a></td>
+  </tr>
+
+  <tr>
+    <td>  </td>
+    <td> <a href="">  </a></td>
+  </tr>
+
+  <tr>
+    <td>  </td>
+    <td> <a href="">  </a></td>
+  </tr>
+
+  <tr>
+    <td>  </td>
+    <td> <a href="">  </a></td>
+  </tr>
+
+  <tr>
+    <td>  </td>
+    <td> <a href="">  </a></td>
+  </tr>
+
+  <tr>
+    <td>  </td>
+    <td> <a href="">  </a></td>
+  </tr>
  
 </table>
