@@ -526,13 +526,13 @@
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href="">  </a></td>
+    <td> Binary Tree Zigzag Level Order Traversal </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0103-binary-tree-zigzag-level-order-traversal"> Binary Tree Zigzag Level Order Traversal </a></td>
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href="">  </a></td>
+    <td> Vertical Order Traversal of a Binary Tree </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0987-vertical-order-traversal-of-a-binary-tree"> Vertical Order Traversal of a Binary Tree </a></td>
   </tr>
 
   <tr>
