@@ -546,8 +546,13 @@
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href="">  </a></td>
+    <td> Lowest Common Ancestor of a Binary Tree </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0236-lowest-common-ancestor-of-a-binary-tree"> Lowest Common Ancestor of a Binary Tree </a></td>
+  </tr>
+
+  <tr>
+    <td> Maximum Width of Binary Tree </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0662-maximum-width-of-binary-tree"> Maximum Width of Binary Tree </a></td>
   </tr>
 
   <tr>
