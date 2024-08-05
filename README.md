@@ -536,13 +536,13 @@
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href="">  </a></td>
+    <td> Binary Tree Right Side View </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0199-binary-tree-right-side-view"> Binary Tree Right Side View </a></td>
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href="">  </a></td>
+    <td> Symmetric Tree </td>
+    <td> <a href="https://github.com/Shivan-Mathur/LeetCode/tree/main/0101-symmetric-tree"> Symmetric Tree </a></td>
   </tr>
 
   <tr>
