@@ -9,31 +9,21 @@
  */
 class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        return findLCA(root, p, q);
-    }
-
-    private TreeNode findLCA(TreeNode root, TreeNode p, TreeNode q){
-        if(root == null){
-            return null;
-        }
-
-        if(root == p || root == q){
+        if(root == null || root == p || root == q){
             return root;
         }
 
-        TreeNode left = findLCA(root.left, p, q);
-        TreeNode right = findLCA(root.right, p, q);
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-        if(left != null && right != null){
-            return root;
-        }
-        else if(left == null && right != null){
+        if(left == null){
             return right;
         }
-        else if(left != null && right == null){
+        else if(right == null){
             return left;
         }
-
-        return null;
+        else{
+            return root;
+        }
     }
 }
