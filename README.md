@@ -561,6 +561,26 @@
   </tr>
 
   <tr>
+    <td> All Nodes Distance K in Binary Tree </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0863-all-nodes-distance-k-in-binary-tree"> All Nodes Distance K in Binary Tree </a></td>
+  </tr>
+
+  <tr>
+    <td> Count Complete Tree Nodes </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0222-count-complete-tree-nodes"> Count Complete Tree Nodes </a></td>
+  </tr>
+
+  <tr>
+    <td> Construct Binary Tree from Preorder and Inorder Traversal </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0105-construct-binary-tree-from-preorder-and-inorder-traversal"> Construct Binary Tree from Preorder and Inorder Traversal </a></td>
+  </tr>
+
+  <tr>
+    <td> Construct Binary Tree from Inorder and Postorder Traversal </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0106-construct-binary-tree-from-inorder-and-postorder-traversal"> Construct Binary Tree from Inorder and Postorder Traversal </a></td>
+  </tr>
+
+  <tr>
     <td>  </td>
     <td> <a href="">  </a></td>
   </tr>
