@@ -14,32 +14,56 @@
  * }
  */
 class Solution {
+    /* Brute Force Solution: Reverse Post-Order Traversal 
+    TC: O(N)
+    SC: O(N)
+
+    // Initialize a global variable 'prev' to keep track of the previously processed node.
+    private TreeNode prev = null;
     public void flatten(TreeNode root) {
-        // Initialize a pointer 'curr' to the root of the tree
-        TreeNode curr = root;
+        
+        
+        if(root == null){
+            return;
+        }
 
-        // Iterate until 'curr' becomes NULL
-        while (curr != null) {
-            // Check if the current node has a left child
-            if (curr.left != null) {
-                // If yes, find the rightmost node in the left subtree
-                TreeNode pre = curr.left;
-                while (pre.right != null) {
-                    pre = pre.right;
+        // Recursive call to flatten the right subtree
+        flatten(root.right);
+
+        // Recursive call to flatten the left subtree
+        flatten(root.left);
+
+
+        // At this point, both left and right subtrees are flattened, and 'prev' is pointing 
+        // to the rightmost node in the flattened right subtree.
+
+        // Set the right child of the current node to 'prev'.
+        root.right = prev;
+
+        // Set the left child of the current node to null.
+        root.left = null;
+
+        // Update 'prev' to the current node for the next iteration.
+        prev = root;
+
+    } */
+
+    public void flatten(TreeNode root){
+        /* Morris Preorder Traversal */
+        
+        TreeNode cur = root;
+
+        while(cur != null){
+            if(cur.left != null){
+                TreeNode prev = cur.left;
+                while(prev.right != null){
+                    prev = prev.right;
                 }
-
-                // Connect the rightmost node in the left subtree to the current node's right child
-                pre.right = curr.right;
-
-                // Move the entire left subtree to the right child of the current node
-                curr.right = curr.left;
-
-                // Set the left child of the current node to NULL
-                curr.left = null;
+                prev.right = cur.right;
+                cur.right = cur.left;
+                cur.left = null;
             }
-
-            // Move to the next node on the right side
-            curr = curr.right;
+            cur = cur.right;
         }
     }
 }
