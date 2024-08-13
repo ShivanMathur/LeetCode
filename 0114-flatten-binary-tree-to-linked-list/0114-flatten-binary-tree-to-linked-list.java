@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    /* Brute Force Solution: Reverse Post-Order Traversal 
+    /* Brute Force Solution: Reverse Pre-Order Traversal 
     TC: O(N)
     SC: O(N)
 
