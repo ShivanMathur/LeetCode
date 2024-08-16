@@ -526,6 +526,11 @@
   </tr>
 
   <tr>
+    <td> Invert Binary Tree </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0226-invert-binary-tree"> Invert Binary Tree </a></td>
+  </tr>
+
+  <tr>
     <td> Binary Tree Zigzag Level Order Traversal </td>
     <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0103-binary-tree-zigzag-level-order-traversal"> Binary Tree Zigzag Level Order Traversal </a></td>
   </tr>
