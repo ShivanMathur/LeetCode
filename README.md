@@ -605,6 +605,11 @@
  </tr>
 
  <tr>
+    <td> Delete Node in a BST </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0450-delete-node-in-a-bst"> Delete Node in a BST </a></td>
+ </tr>
+
+ <tr>
     <td>  </td>
     <td> <a href="">  </a></td>
  </tr>
