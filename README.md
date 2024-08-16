@@ -581,13 +581,37 @@
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href="">  </a></td>
+    <td> Serialize and Deserialize Binary Tree </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0297-serialize-and-deserialize-binary-tree"> Serialize and Deserialize Binary Tree </a></td>
   </tr>
 
   <tr>
-    <td>  </td>
-    <td> <a href="">  </a></td>
+    <td> Flatten Binary Tree to Linked List </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0114-flatten-binary-tree-to-linked-list"> Flatten Binary Tree to Linked List </a></td>
   </tr>
  
+</table>
+
+<h2>Binary Search Tree </h2>
+<table>
+ <tr>
+    <td> Search in a Binary Search Tree </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0700-search-in-a-binary-search-tree"> Search in a Binary Search Tree </a></td>
+ </tr>
+
+ <tr>
+    <td> Insert into a Binary Search Tree </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0701-insert-into-a-binary-search-tree"> Insert into a Binary Search Tree </a></td>
+ </tr>
+
+ <tr>
+    <td>  </td>
+    <td> <a href="">  </a></td>
+ </tr>
+
+ <tr>
+    <td>  </td>
+    <td> <a href="">  </a></td>
+ </tr>
+
 </table>
