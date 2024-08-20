@@ -531,6 +531,11 @@
   </tr>
 
   <tr>
+    <td> Path Sum </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0112-path-sum"> Path Sum </a></td>
+  </tr>
+
+  <tr>
     <td> Binary Tree Zigzag Level Order Traversal </td>
     <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0103-binary-tree-zigzag-level-order-traversal"> Binary Tree Zigzag Level Order Traversal </a></td>
   </tr>
@@ -612,6 +617,31 @@
  <tr>
     <td> Delete Node in a BST </td>
     <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0450-delete-node-in-a-bst"> Delete Node in a BST </a></td>
+ </tr>
+
+ <tr>
+    <td> Kth Smallest Element in a BST </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0230-kth-smallest-element-in-a-bst"> Kth Smallest Element in a BST </a></td>
+ </tr>
+
+ <tr>
+    <td> Validate Binary Search Tree </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0098-validate-binary-search-tree"> Validate Binary Search Tree </a></td>
+ </tr>
+
+ <tr>
+    <td> Lowest Common Ancestor of a Binary Search Tree </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree"> Lowest Common Ancestor of a Binary Search Tree </a></td>
+ </tr>
+
+ <tr>
+    <td> Construct Binary Search Tree from Preorder Traversal </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/1008-construct-binary-search-tree-from-preorder-traversal"> Construct Binary Search Tree from Preorder Traversal </a></td>
+ </tr>
+
+ <tr>
+    <td> Binary Search Tree Iterator </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0173-binary-search-tree-iterator"> Binary Search Tree Iterator </a></td>
  </tr>
 
  <tr>
