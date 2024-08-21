@@ -21,6 +21,7 @@ class Solution {
 
     public void recoverTree(TreeNode root) {
         first = middle = last = null;
+        prev = new TreeNode(Integer.MIN_VALUE);
 
         inorder(root);
 
@@ -42,7 +43,7 @@ class Solution {
         if(node == null){
             return;
         }
-        
+
         inorder(node.left);
 
         if(prev != null && prev.val > node.val){
