@@ -1,6 +1,6 @@
 class Solution {
 
-    /* Brute Force Validate Grid function */
+    /* Brute Force Solution's Validate Grid function
     private boolean validateGrid(char[][] board, int startRow, int endRow, int startCol, int endCol){
         HashSet<Character> grid = new HashSet<>();
 
@@ -13,10 +13,15 @@ class Solution {
         }
 
         return true;
-    }
+    } */
+     
+
     public boolean isValidSudoku(char[][] board) {
 
-        /* Brute Force Apprach */
+        /* Brute Force Apprach
+
+        TC: 
+        SC: 
 
         // Validate Rows
         for (int row = 0; row < 9; row++) {
@@ -50,27 +55,35 @@ class Solution {
             }
         }
 
-        return true;
+        return true; 
+        */
 
-        /*
-         * Optimized Approach
-         * for(int row=0; row < board.length; row++){
-         * HashSet<Character> rowSet = new HashSet<>();
-         * HashSet<Character> colSet = new HashSet<>();
-         * HashSet<Character> cube = new HashSet<>();
-         * 
-         * for(int col=0; col<board[0].length; col++){
-         * if(board[row][col] != '.' && !rowSet.add(board[row][col])){
-         * return false;
-         * }
-         * if(board[col][row] != '.' && !colSet.add(board[col][row])){
-         * return false;
-         * }
-         * int rowIndex = row/3;
-         * int colIndex = col/3;
-         * 
-         * }
-         * }
-         */
+        /* Optimized Approach */
+
+        HashSet<String> set = new HashSet<>();
+        
+        for (int row = 0; row < board.length; row++) {
+            
+            for (int col = 0; col < board[0].length; col++) {
+                char val = board[row][col];
+
+                if (val != '.'){
+                    int grid = (3 * (row/3)) + (col/3);
+
+                    if(set.contains("r" + row + val) || 
+                        set.contains("c" + col + val) ||
+                        set.contains("g" + grid + val)) {
+                            return false;
+                    }
+                    else{
+                        set.add("r" + row + val);
+                        set.add("c"+ col + val);
+                        set.add("g" + grid + val);
+                    }
+                }
+            }
+        }
+
+        return true;
     }
 }
