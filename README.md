@@ -655,3 +655,27 @@
  </tr>
 
 </table>
+
+<h2> 1D Dynamic Programming </h2>
+<table>
+ <tr>
+    <td> Fibonacci Number </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0509-fibonacci-number"> Fibonacci Number </a></td>
+ </tr>
+
+ <tr>
+    <td> Climbing Stairs </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0070-climbing-stairs"> Climbing Stairs </a></td>
+ </tr>
+
+ <tr>
+    <td> House Robber </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0198-house-robber"> House Robber </a></td>
+ </tr>
+
+ <tr>
+    <td>  </td>
+    <td> <a href="">  </a></td>
+ </tr>
+
+</table>
