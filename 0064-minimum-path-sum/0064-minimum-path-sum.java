@@ -23,7 +23,7 @@ class Solution {
 
                 // Otherwise
                 else{
-                    dp[i][j] = Math.min(grid[i][j] + dp[i+1][j], grid[i][j] + dp[i][j+1]);
+                    dp[i][j] = grid[i][j] + Math.min(dp[i+1][j], dp[i][j+1]);
                 }
             }
         }
