@@ -3,10 +3,10 @@ class Solution {
         /* DP: Memoization Approach */
         int[][] dp = new int[m][n];
 
-        return uniquePathsHelper(m-1, n-1, dp);
+        return uniquePathsHelper(m-1, n-1, dp); */
 
 
-        /* DP: Tabulation Approach
+        /* DP: Tabulation Approach */
         int[][] dp = new int[m][n];
 
         for(int i=0; i<m; i++){
@@ -26,7 +26,7 @@ class Solution {
             }
         }
 
-        return dp[m-1][n-1]; */
+        return dp[m-1][n-1];
     }
 
 
