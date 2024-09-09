@@ -13,14 +13,14 @@ class Solution {
         if( m>=0 && n>=0 && obstacleGrid[m][n] == 1){
             return 0;
         }
-        if(m == 0 && n == 0){
+        else if(m == 0 && n == 0){
             return 1;
         }
-        if(m<0 || n<0){
+        else if(m<0 || n<0){
             return 0;
         }
 
-        if(dp[m][n] != 0){
+        else if(dp[m][n] > 0){
             return dp[m][n];
         }
 
