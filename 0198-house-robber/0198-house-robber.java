@@ -7,7 +7,9 @@ class Solution {
         Arrays.fill(dp, -1);
         return rob(nums, nums.length - 1, dp); */
 
-        /* DP: Tabulation */
+        /* DP: Tabulation 
+        TC: O(N)
+        SC: O(N) 
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
 
@@ -22,7 +24,32 @@ class Solution {
             dp[i] = Math.max(pick, notpick);
         }
 
-        return dp[nums.length-1];
+        return dp[nums.length-1]; */
+
+        /* DP: Space Optimization 
+        TC: O(N)
+        SC: O(1) */
+
+        int prev = nums[0];
+        int prev2 = 0;
+
+        int[] dp = new int[nums.length];
+
+        for(int i=1; i<nums.length; i++){
+            int pick = nums[i];
+            if(i>1){
+                pick += prev2;
+            }
+
+            int notpick = prev;
+
+            int curr = Math.max(pick, notpick);
+
+            prev2 = prev;
+            prev = curr;
+        }
+
+        return prev;
     }
 
     private int rob(int[] nums, int index, int[] dp){
