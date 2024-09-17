@@ -18,7 +18,7 @@ class Solution {
 
         /* DP: Tabulation Approach 
         TC: O(N*N) + O(N)
-        SC: O(N*N)*/
+        SC: O(N*N) 
         int n = matrix.length;
         int[][] dp = new int[n][n];
 
@@ -31,10 +31,12 @@ class Solution {
             for(int col=0; col<n; col++){
                 int up = dp[row-1][col];
                 
-                int left_diag = 100000, right_diag = 100000;
+                int left_diag = 100000;
                 if(col-1 >=0){
                     left_diag = dp[row-1][col-1];
                 }
+
+                int right_diag = 100000;
                 if(col+1 < n){
                     right_diag = dp[row-1][col+1];
                 }
@@ -47,7 +49,48 @@ class Solution {
             ans = Math.min(ans, dp[n-1][col]);
         }
 
+        return ans; */
+
+        /* DP: Space Optimization
+        TC: O(N*N)
+        SC: O(N) */
+
+        int n = matrix.length;
+        int[] prevRow = new int[n];
+        int[] currRow = new int[n];
+
+        // Base Case
+        for(int col=0; col<n; col++){
+            prevRow[col] = matrix[0][col];
+        }
+
+        for(int row=1; row<n; row++){
+            for(int col=0; col<n; col++){
+                int up = prevRow[col];
+
+                int left_diag = 100000;
+                if(col-1>=0){
+                    left_diag = prevRow[col-1];
+                }
+
+                int right_diag = 100000;
+                if(col+1<n){
+                    right_diag = prevRow[col+1];
+                }
+
+                currRow[col] = matrix[row][col] + Math.min(up, Math.min(left_diag, right_diag));
+            }
+            prevRow = currRow;
+        }
+
+        int ans = prevRow[0];
+
+        for(int col=1; col<n; col++){
+            ans = Math.min(ans, prevRow[col]);
+        }
+
         return ans;
+
     }
 
     private int minFallingPathSumHelper(int row, int col, int[][] matrix, int[][] dp){
