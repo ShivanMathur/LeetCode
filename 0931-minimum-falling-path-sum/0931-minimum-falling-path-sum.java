@@ -57,7 +57,9 @@ class Solution {
 
         int n = matrix.length;
         int[] prevRow = new int[n];
-        int[] currRow = new int[n];
+        
+
+        Arrays.fill(prevRow, -1);
 
         // Base Case
         for(int col=0; col<n; col++){
@@ -65,15 +67,16 @@ class Solution {
         }
 
         for(int row=1; row<n; row++){
+            int[] currRow = new int[n];
             for(int col=0; col<n; col++){
                 int up = prevRow[col];
 
-                int left_diag = 100000;
+                int left_diag = (int)Math.pow(10,9);
                 if(col-1>=0){
                     left_diag = prevRow[col-1];
                 }
 
-                int right_diag = 100000;
+                int right_diag = (int)Math.pow(10,9);
                 if(col+1<n){
                     right_diag = prevRow[col+1];
                 }
