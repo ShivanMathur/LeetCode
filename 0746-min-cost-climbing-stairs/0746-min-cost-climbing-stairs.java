@@ -8,7 +8,9 @@ class Solution {
 
         return Math.min(opt1, opt2); */
 
-        /* DP: Memoization Approach */
+        /* DP: Memoization Approach
+        TC: O(N)
+
         int n = cost.length;
         int[] dp = new int[n];
         Arrays.fill(dp, -1);
@@ -16,7 +18,23 @@ class Solution {
         int opt1 = minCostClimbingStairsHelper(cost, n-1, dp);
         int opt2 = minCostClimbingStairsHelper(cost, n-2, dp);
 
-        return Math.min(opt1, opt2);
+        return Math.min(opt1, opt2); */
+
+        /* DP: Tabulation Approach */
+        
+        int n = cost.length;
+        int[] dp = new int[n];
+
+        for(int i=0; i<n; i++){
+            if(i < 2){
+                dp[i] = cost[i];
+            }
+            else{
+                dp[i] = cost[i] + Math.min(dp[i-1], dp[i-2]);
+            }
+        }
+
+        return Math.min(dp[n-1], dp[n-2]); 
     }
 
     // DP Memoization Helper Function
