@@ -20,7 +20,9 @@ class Solution {
 
         return Math.min(opt1, opt2); */
 
-        /* DP: Tabulation Approach */
+        /* DP: Tabulation Approach
+        TC: O(N)
+        SC: O(N)
         
         int n = cost.length;
         int[] dp = new int[n];
@@ -34,7 +36,23 @@ class Solution {
             }
         }
 
-        return Math.min(dp[n-1], dp[n-2]); 
+        return Math.min(dp[n-1], dp[n-2]); */
+
+        /* DP: Space Optimization 
+        TC: O(N)
+        SC: O(1) */
+        
+        int n = cost.length;
+        int prev2 = cost[0];
+        int prev1 = cost[1];
+
+        for(int i=2; i<n; i++){
+            int curr = cost[i] + Math.min(prev1, prev2);
+            prev2 = prev1;
+            prev1 = curr;
+        }
+
+        return Math.min(prev2, prev1);
     }
 
     // DP Memoization Helper Function
