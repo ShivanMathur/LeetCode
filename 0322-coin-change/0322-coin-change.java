@@ -1,40 +1,17 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
-        /* DP: Memoization */
+        int[] dp = new int[amount+1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
 
-        int[][] dp = new int[coins.length][amount+1];
-
-        for(int[] row : dp){
-            Arrays.fill(row, -1);
-        }
-
-        int ans = coinChangeHelper(coins, amount, coins.length-1, dp);
-        if (ans >= (int) Math.pow(10, 9))
-            return -1;
-
-        return ans;
-
-    }
-
-    private static int coinChangeHelper(int[] coins, int amount, int ind, int[][] dp){
-        if(ind == 0){
-            if(amount % coins[ind] == 0 ){
-                return amount / coins[ind];
+        for(int i=0; i<coins.length; i++){
+            for(int j=coins[i]; j<dp.length; j++){
+                if(dp[j - coins[i]] != Integer.MAX_VALUE){
+                    dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);
+                }
             }
-            return (int)(Math.pow(10,9));
         }
 
-        if(dp[ind][amount] != -1){
-            return dp[ind][amount];
-        }
-
-        int notTake = coinChangeHelper(coins, amount, ind-1, dp);
-        int take = Integer.MAX_VALUE;
-        if(coins[ind] <= amount){
-            take = 1 + coinChangeHelper(coins, amount - coins[ind], ind, dp);
-        }
-
-        return dp[ind][amount] = Math.min(notTake, take);
+        return dp[amount] == Integer.MAX_VALUE ? -1 : dp[amount];
     }
-
 }
