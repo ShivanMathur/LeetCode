@@ -673,18 +673,64 @@
     <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0198-house-robber"> House Robber </a></td>
  </tr>
 
- <tr>
-    <td>  </td>
-    <td> <a href="">  </a></td>
- </tr>
 
 </table>
 
-<h2> Multidimensional Dynamic Programming </h2>
+<h2> 2D/3D DP and DP on Grids </h2>
 <table>
+ <tr>
+    <td> Unique Paths </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0062-unique-paths"> Unique Paths </a></td>
+ </tr>
+
+ <tr>
+    <td> Unique Paths II </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0063-unique-paths-ii"> Unique Paths II </a></td>
+ </tr>
+
+ <tr>
+    <td> Minimum Path Sum </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0064-minimum-path-sum"> Minimum Path Sum </a></td>
+ </tr>
+
+ <tr>
+    <td> Triangle </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0120-triangle"> Triangle </a></td>
+ </tr>
+
+ <tr>
+    <td> Minimum Falling Path Sum </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0931-minimum-falling-path-sum"> Minimum Falling Path Sum </a></td>
+ </tr>
+
+ 
+
+</table>
+
+<h2> DP on Subsequences </h2>
+<table>
+ <tr>
+    <td> Partition Equal Subset Sum </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0416-partition-equal-subset-sum"> Partition Equal Subset Sum </a></td>
+ </tr>
+
+ <tr>
+    <td> Assign Cookies </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0455-assign-cookies"> Assign Cookies </a></td>
+ </tr>
+
+ <tr>
+    <td> Coin Change </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0322-coin-change"> Coin Change </a></td>
+ </tr>
+
+ <tr>
+    <td> Target Sum </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0494-target-sum"> Target Sum </a></td>
+ </tr>
+
  <tr>
     <td>  </td>
     <td> <a href="">  </a></td>
  </tr>
-
 </table>
