@@ -8,6 +8,6 @@ class Solution {
             sum += nums[i];
         } 
 
-        return len*(len+1)/2 - sum;        
+        return len*(len+1)/2 - sum;  
     }
 }
