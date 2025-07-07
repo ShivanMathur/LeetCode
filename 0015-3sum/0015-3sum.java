@@ -1,27 +1,60 @@
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-        /* Approach 1: Consider the thirst element as -(first + second). Then find if the third exists in the HashSet. If not, store the second element in the set and move ot the right. 
+        /* TUF :: Better Approach: Using Hashing
         TC: O(N^2 * log(no. of unique triplets))
         SC: O(2 * no. of the unique triplets) + O(N)
+        Set<List<Integer>> set = new HashSet<>();
+        for(int i=0; i<nums.length; i++){
+            Set<Integer> hashset = new HashSet<>();
 
-        */
-
-        Set<List<Integer>> tripletSet = new HashSet<>();
-
-        for(int first=0; first<nums.length; first++){
-            Set<Integer> lookupSet = new HashSet<>();
-            for(int second=first+1; second<nums.length; second++){
-                int third = -(nums[first] + nums[second]);
-                if(lookupSet.contains(third)){
-                    List<Integer> tempAns = Arrays.asList(nums[first], nums[second], third);
-                    tempAns.sort(null);
-                    tripletSet.add(tempAns);
+            for(int j=i+1; j<nums.length; j++){
+                int third = -(nums[i] + nums[j]);
+                if(hashset.contains(third)){
+                    List<Integer> temp = Arrays.asList(nums[i], nums[j], third);
+                    temp.sort(null);
+                    set.add(temp);
                 }
-                lookupSet.add(nums[second]);
+                hashset.add(nums[j]);
             }
         }
 
-        List<List<Integer>> result = new ArrayList<>(tripletSet);
+        List<List<Integer>> result = new ArrayList<>(set);
+        return result; */
+
+        /* TUF: Optimal Approach */
+        Arrays.sort(nums);
+
+        List<List<Integer>> result = new ArrayList<>();
+
+        for(int i=0; i<nums.length; i++){
+            if(i>0 && nums[i] == nums[i-1]){
+                continue;
+            }
+            int j = i+1;
+            int k = nums.length-1;
+            while(j<k){
+                int sum = nums[i] + nums[j] + nums[k];
+                if(sum == 0){
+                    List<Integer> temp = Arrays.asList(nums[i], nums[j], nums[k]);
+                    result.add(temp);
+                    j++;
+                    k--;
+                    while(j<k && nums[j] == nums[j-1]){
+                        j++;
+                    }
+                    while(j<k && nums[k] == nums[k+1]){
+                        k--;
+                    }
+                }
+                else if(sum < 0){
+                    j++;
+                }
+                else{
+                    k--;
+                }
+            }
+        }
+
         return result;
     }
 }
