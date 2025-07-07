@@ -1,51 +1,31 @@
 class Solution {
     public int longestConsecutive(int[] nums) {
-        /* Better Approach: First Sort the array and then iterate over the array to find the LCS
+        // Better Approach : First Sort the array and then iterate to find LCS. 
+        
         if(nums.length <= 0){
             return 0;
         }
+        
         Arrays.sort(nums);
 
-        int count = 1, longestCount = 0;
-
-        for(int i=1; i<nums.length; i++){
-            if(nums[i] != nums[i-1]){
-                if(nums[i] == nums[i-1]+1 ){
-                    count++;
-                }
-                else{
-                longestCount = Math.max(longestCount, count);
-                count = 1;
-                }
+        int currCount = 0; // Counter for the current consecutive sequence length.
+        int longestCount = 1; // Variable to store the maximum consecutive sequence length.
+        int lastNum = Integer.MIN_VALUE;
+        
+        for(int i=0; i<nums.length; i++){
+            // If the current number is consecutive to the previous one, increment the counter.
+            if(nums[i] - 1 == lastNum){
+                currCount++;
+                lastNum = nums[i];
             }
-        }
-        return Math.max(longestCount, count); */
-
-        /* Optimized Approach */
-        if(nums.length <= 0){
-            return 0;
-        }
-
-        HashSet<Integer> set = new HashSet<>();
-
-        // Insert all the array elements into the hashset
-        for(int i : nums){
-            set.add(i);
-        }
-
-        int longestCount = 1;
-
-        // Iterate though the array element
-        for(int num : set){
-            if(!set.contains(num-1)){
-                int count = 1;
-                int element = num;
-                while(set.contains(element + 1)){
-                    count++;
-                    element += 1;
-                }
-                longestCount = Math.max(longestCount, count);
+            // If the current number is not consecutive, update 'currCount' and 'lastNum'.
+            else if(nums[i] != lastNum){
+                lastNum = nums[i];
+                currCount = 1;
             }
+
+            // Update 'longest' with the maximum of 'longestCount' and 'currCount'.
+            longestCount = Math.max(currCount, longestCount);
         }
 
         return longestCount;
