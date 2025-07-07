@@ -1,6 +1,5 @@
 class Solution {
     public int longestConsecutive(int[] nums) {
-
         /* Better Approach: First Sort the array and then iterate over the array to find the LCS
         if(nums.length <= 0){
             return 0;
