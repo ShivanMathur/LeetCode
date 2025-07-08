@@ -5,7 +5,6 @@ class Solution {
             TC: O(N) + O(N) + O(N) = O(3N) {O(2N) for computing prefixMax and suffixMax & O(N) for iterating over the array to calculate the result}
 
             SC: O(2N) {Storing prefixMax and suffixMax}
-        */
 
         int n = height.length;
 
@@ -39,6 +38,44 @@ class Solution {
         for(int i=0; i<n; i++){
             result += Math.min(prefixMax[i], suffixMax[i]) - height[i];
         }
+
+        return result;
+        */
+
+        /* Optimized Approach: Two-pointer
+        TC: O(N)
+        SC: (1)
+        */
+
+        int n = height.length;
+
+        int leftMax = 0;
+        int rightMax = 0;
+        int l = 0;
+        int r = n-1;
+
+        int result = 0;
+
+        while(l < r){
+            if(height[l] <= height[r]){
+                if(height[l] >= leftMax){
+                    leftMax = height[l];
+                }
+                else{
+                    result += leftMax - height[l];
+                }
+                l++;
+            }
+            else{
+                if(height[r] >= rightMax){
+                    rightMax = height[r];
+                }
+                else{
+                    result += rightMax - height[r];
+                }
+                r--;
+            }
+        } 
 
         return result;
     }
