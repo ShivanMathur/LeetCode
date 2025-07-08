@@ -136,6 +136,11 @@
   </tr>
 
   <tr>
+    <td> Trapping Rain Water </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0011-container-with-most-water"> Trapping Rain Water </a></td>
+  </tr>
+
+  <tr>
     <td> Sort Colors </td>
     <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0075-sort-colors"> Sort Colors </a></td>
   </tr>
