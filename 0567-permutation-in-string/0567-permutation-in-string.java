@@ -1,28 +1,35 @@
 class Solution {
     public boolean checkInclusion(String s1, String s2) {
-        int len1 = s1.length(), len2 = s2.length();
-        if (len1 > len2) return false;
-        
-        int[] count = new int[26];
-        for (int i = 0; i < len1; i++) {
-            count[s1.charAt(i) - 'a']++;
-            count[s2.charAt(i) - 'a']--;
-        }
-        if (allZero(count)) return true;
-        
-        for (int i = len1; i < len2; i++) {
-            count[s2.charAt(i) - 'a']--;
-            count[s2.charAt(i - len1) - 'a']++;
-            if (allZero(count)) return true;
-        }
-        
-        return false;
-    }
+        int n = s1.length();
+        int m = s2.length();
 
-    private boolean allZero(int[] count) {
-        for (int i = 0; i < 26; i++) {
-            if (count[i] != 0) return false;
+        if(n > m){
+            return false;
         }
-        return true;
+        
+        int[] s1_freq = new int[26];
+        int[] s2_freq = new int[26];
+
+        for(int i=0; i<n; i++){
+            s1_freq[s1.charAt(i) - 'a']++;
+        }
+
+        int left = 0, right = 0;
+
+        while(right < m){
+            s2_freq[s2.charAt(right) - 'a']++;
+
+            if(right - left + 1 > n){
+                s2_freq[s2.charAt(left) - 'a']--;
+                left++;
+            }
+
+            if(Arrays.equals(s1_freq, s2_freq)){
+                return true;
+            }
+
+            right++;
+        }
+        return false;
     }
 }
