@@ -200,6 +200,10 @@
     <td > Minimum Size Subarray Sum </td>
     <td> <a href="https://github.com/ShivanMathur/LeetCode/blob/main/0209-minimum-size-subarray-sum"> Minimum Size Subarray Sum </a></td>
   </tr>
+ <tr>
+    <td > Minimum Window Substring </td>
+    <td> <a href="https://github.com/ShivanMathur/LeetCode/tree/main/0076-minimum-window-substring"> Minimum Window Substring </a></td>
+  </tr>
    <tr>
     <td > Fruits in basket </td>
     <td> <a href="https://github.com/ShivanMathur/LeetCode/blob/main/0904-fruit-into-baskets"> Fruits in basket</a></td>
