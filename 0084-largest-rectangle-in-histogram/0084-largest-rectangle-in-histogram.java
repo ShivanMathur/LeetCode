@@ -1,5 +1,9 @@
 class Solution {
     public int largestRectangleArea(int[] heights) {
+        /*
+
+        TC: O()
+
         int[] NSR = getNextSmallestRight(heights);
         int[] NSL = getNextSmallestLeft(heights);
 
@@ -10,6 +14,45 @@ class Solution {
             int w = NSR[i] - NSL[i] - 1;
 
             maxArea = Math.max(maxArea, h*w);
+        }
+
+        return maxArea;
+        */
+
+        /* Optimized Apprach:
+            TC: O(N){Array Traversal} + O(N){Stack Operations}
+            SC: O(N) {Stack}
+
+        */
+
+        Stack<Integer> stack = new Stack<>();
+        int n = heights.length;
+
+        int maxArea = 0;
+
+        for(int i=0; i<n; i++){
+            while(!stack.isEmpty() && heights[stack.peek()] >= heights[i]){
+                int height = heights[stack.pop()];
+
+                int nextSmallestElement = i;
+                int previousSmallestElemet = stack.isEmpty() ? -1 : stack.peek();
+
+                int width = nextSmallestElement - previousSmallestElemet - 1;
+
+                maxArea = Math.max(maxArea, height*width);
+            }
+            stack.push(i);
+        }
+
+        while(!stack.isEmpty()){
+            int height = heights[stack.pop()];
+
+            int nextSmallestElement = n;
+            int previousSmallestElemet = stack.isEmpty() ? -1 : stack.peek();
+
+            int width = nextSmallestElement - previousSmallestElemet - 1;
+
+            maxArea = Math.max(maxArea, height*width);
         }
 
         return maxArea;
