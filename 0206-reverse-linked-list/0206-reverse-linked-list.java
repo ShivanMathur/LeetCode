@@ -10,10 +10,14 @@
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-        
+        /*
+        Iterative Approach 
+            TC: O(N)
+        */
+
+        ListNode curr = head;
         ListNode prev = null;
         ListNode next = null;
-        ListNode curr = head;
         
         while(curr != null){
             next = curr.next;
@@ -21,8 +25,8 @@ class Solution {
             prev = curr;
             curr = next;
         }
-        
-        return prev;
-        
+
+        head = prev;
+        return head;        
     }
 }
