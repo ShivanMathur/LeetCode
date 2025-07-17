@@ -19,7 +19,7 @@ class Solution {
             TC: O(N)
             SC: Auxilary Space: O(1)
                 Recursion Stack: O(N) {O(N/2)}
-        */
+        
 
         // Find Middle Node
         ListNode slow = head;
@@ -50,7 +50,41 @@ class Solution {
             reverseHead = rev_front;
         }
 
+        */
 
+        /* Approach 2
+            i. Instead of using recursion stack space, create a auxilary space stack.
+            ii. Compute the size of stack, k and iterate till half of it (k/2) and pop nodes.
+            iii. Start from start of the LL and connect with the top node in the stack
+        
+            TC: O(N)
+            SC: O(N) {Aux space}
+        */
+
+        Stack<ListNode> stack = new Stack<>();
+        ListNode temp = head;
+
+        // Store all the LL nodes in the stack
+        while(temp != null){
+            stack.push(temp);
+            temp = temp.next;
+        }
+
+        // Find the size of stack and pop only half of the nodes from stack
+        int itr = stack.size() / 2;
+
+        ListNode curr = head;
+        
+        while(itr > 0){
+            ListNode topNode = stack.pop();
+            ListNode front = curr.next;
+            curr.next = topNode;
+            topNode.next = front;
+            curr = front;
+            itr--;
+        }
+
+        curr.next = null;
     }
 
     public ListNode reverse(ListNode head){
