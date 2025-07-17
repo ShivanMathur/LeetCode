@@ -5,7 +5,14 @@ class Solution {
 
         while(low <= high){
             int mid = low + (high-low)/2;
+            
+            // Search space is already sorted, then nums[low] will always be the
+            // smaller element in the search space
 
+            if (nums[low] <= nums[high]){
+                ans = Math.min(ans, nums[low]);
+                break;
+            }
             if(nums[low] <= nums[mid]){
                 ans = Math.min(ans, nums[low]);
                 low = mid+1;
