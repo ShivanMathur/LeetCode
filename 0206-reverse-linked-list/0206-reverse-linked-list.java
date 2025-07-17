@@ -13,7 +13,6 @@ class Solution {
         /*
         Iterative Approach 
             TC: O(N)
-        */
 
         ListNode curr = head;
         ListNode prev = null;
@@ -27,6 +26,28 @@ class Solution {
         }
 
         head = prev;
-        return head;        
+        return head; 
+        */
+
+        /* Recursive Approach
+            TC: O(N)
+            SC: O(N) {Recursive Stack}
+        */
+
+        return reverse(head);
+    }
+
+    // Recursive Function
+    public ListNode reverse(ListNode head){
+        if(head == null || head.next == null){
+            return head;
+        }
+
+        ListNode newHead = reverse(head.next);
+        ListNode front = head.next;
+        front.next = head;
+        head.next = null;
+
+        return newHead;
     }
 }
