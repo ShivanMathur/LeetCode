@@ -16,27 +16,29 @@
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
-        List<List<Integer>> finalAns = new ArrayList<List<Integer>>();
+        List<List<Integer>> ans = new ArrayList<List<Integer>>();
 
         if(root == null) {
-            return finalAns;
+            return ans;
         }
 
         queue.add(root);
+
         while(!queue.isEmpty()){
-            int level = queue.size();
-            List<Integer> ans = new ArrayList<>();
-            for(int i=0; i<level; i++){
+            int size = queue.size();
+            List<Integer> level = new ArrayList<>();
+            for(int i=0; i<size; i++){
                 if(queue.peek().left != null){
                     queue.add(queue.peek().left);
                 }
                 if(queue.peek().right != null){
                     queue.add(queue.peek().right);
                 }
-                ans.add(queue.remove().val);
+                level.add(queue.poll().val);
             }
-            finalAns.add(ans);
+            ans.add(level);
         }
-        return finalAns;
+
+        return ans;
     }
 }
