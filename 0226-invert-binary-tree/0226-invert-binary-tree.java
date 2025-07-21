@@ -19,15 +19,12 @@ class Solution {
             return null;
         }
 
-        TreeNode swap = root.left;
-        root.left = root.right;
-        root.right = swap;
+        TreeNode leftTree = invertTree(root.left);
+        TreeNode rightTree = invertTree(root.right);
 
-        invertTree(root.left);
-        invertTree(root.right);
+        root.left = rightTree;
+        root.right = leftTree;
 
-        return root;
-
-
+        return root; 
     }
 }
