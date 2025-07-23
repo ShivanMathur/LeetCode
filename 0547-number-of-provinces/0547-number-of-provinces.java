@@ -1,5 +1,9 @@
 class Solution {
     public int findCircleNum(int[][] isConnected) {
+        /*
+            TC: O(N){Iterating ofr all cities} + O(V + 2E){DFS traversal for all the nodes}
+            SC: O(N){Visited} + O(N){Recusrion Stack}
+        */
         int[] visited = new int[isConnected.length];
         int provinces = 0;
 
