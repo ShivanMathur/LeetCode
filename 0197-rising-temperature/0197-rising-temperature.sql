@@ -1,19 +1,11 @@
 -- Write your PostgreSQL query statement below
--- APPROACH 1: Using CTE and LAG Function
+-- Approach 1: Using sub-query
+-- SELECT w1.id 
+-- from weather w1
+-- where exists (select 1 from weather w2 where w1.recordDate = w2.recordDate+1 and w1.temperature > w2.temperature);
 
-WITH previous_weather_data AS
-(
-    SELECT 
-        id,
-        recordDate,
-        temperature,
-        LAG(temperature) OVER (ORDER BY recordDate) AS previous_temperature,
-        LAG(recordDate) OVER (ORDER BY recordDate) AS previous_recordDate
-    FROM weather
-)
-
-SELECT id
-FROM previous_weather_data
-WHERE
-temperature > previous_temperature
-AND recordDate = previous_recordDate + interval '1 day';
+-- Approach 2: Using Joins
+select w1.id from weather w1
+join weather w2
+on w1.recordDate = w2.recordDate+1
+where w1.temperature > w2.temperature;
