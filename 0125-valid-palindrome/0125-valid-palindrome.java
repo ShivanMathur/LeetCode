@@ -1,24 +1,30 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        if (s.isEmpty()) {
+        /* Two-Pointer Approach
+            TC: O(N)
+            SC: O(1)
+        */
+
+        if(s.isEmpty()){
             return true;
         }
 
         s = s.toLowerCase();
+        int left = 0, right = s.length() - 1;
 
-        int start = 0, end = s.length() - 1;
-
-        while (start <= end) {
-            if (!Character.isLetterOrDigit(s.charAt(start))) {
-                start++;
-            } else if (!Character.isLetterOrDigit(s.charAt(end))) {
-                end--;
-            } else {
-                if (s.charAt(start) != s.charAt(end)) {
+        while(left <= right){
+            if(!Character.isLetterOrDigit(s.charAt(left))){
+                left++;
+            }
+            else if(!Character.isLetterOrDigit(s.charAt(right))){
+                right--;
+            }
+            else{
+                if(s.charAt(left) != s.charAt(right)){
                     return false;
                 }
-                start++;
-                end--;
+                left++;
+                right--;
             }
         }
         return true;
