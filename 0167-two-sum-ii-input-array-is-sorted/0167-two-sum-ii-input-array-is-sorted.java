@@ -1,20 +1,18 @@
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
-        int pointer_1 = 0, pointer_2 = numbers.length - 1;
+        int left = 0, right = numbers.length -1;
 
-        while(pointer_1 < pointer_2){
-            int sum = numbers[pointer_1] + numbers[pointer_2];
-            if(sum == target){
-                System.gc();
-                return new int[]{pointer_1 + 1, pointer_2 + 1};
+        while(left < right){
+            if(numbers[left] + numbers[right] == target){
+                break;
             }
-            else if (sum > target){
-                pointer_2 -= 1;
+            else if(numbers[left] + numbers[right] > target){
+                right--;
             }
             else{
-                pointer_1 += 1;
+                left++;
             }
         }
-    return new int[2];
+        return new int[]{left+1, right+1};
     }
 }
