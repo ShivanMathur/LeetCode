@@ -15,6 +15,8 @@
  */
 class Solution {
     public TreeNode invertTree(TreeNode root) {
+        /* Recursive Approach
+
         if(root == null){
             return null;
         }
@@ -26,5 +28,33 @@ class Solution {
         root.right = leftTree;
 
         return root; 
+        */
+
+        /* Level Order */
+        if(root == null){
+            return null;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            TreeNode node = queue.poll();
+
+            // Swap Nodes
+            TreeNode temp = node.left;
+            node.left = node.right;
+            node.right = temp;
+
+            if(node.left != null){
+                queue.add(node.left);
+            }
+            if(node.right != null){
+                queue.add(node.right);
+            }
+        }
+
+        return root;
     }
 }
