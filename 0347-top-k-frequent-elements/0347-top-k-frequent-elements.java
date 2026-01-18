@@ -8,7 +8,7 @@ class Solution {
 
         List<Integer>[] bucket = new List[nums.length + 1];
 
-        for( int key : freqMap.keySet()){
+        for(int key : freqMap.keySet()){
             int freq = freqMap.get(key);
             if(bucket[freq] == null){
                 bucket[freq] = new ArrayList<>();
@@ -16,16 +16,19 @@ class Solution {
             bucket[freq].add(key);
         }
 
-        int[] ans = new int[k];
-        int pos = 0;
-        for(int i=bucket.length-1; i>=0 && pos < k; i--){
+        int[] result = new int[k];
+        int counter = 0;
+
+        for(int i=bucket.length-1; i>=0 && counter < k; i--){
             if(bucket[i] != null){
-                for(int ele : bucket[i]){
-                    ans[pos++] = ele;
+                for(int num : bucket[i]){
+                    result[counter++] = num;
                 }
             }
         }
 
-        return ans;
+        return result;
+
+
     }
 }
