@@ -1,23 +1,28 @@
 class Solution {
     public boolean isValidSudoku(char[][] board) {
-        HashSet<String> set = new HashSet<>();
+        
+        /* Approach: Using HashSet
+            TC: O(n^2)
+            SC: O(n^2)
+        */
 
-        for(int r=0; r<9; r++){
-            for(int c=0; c<9; c++){
-                char val = board[r][c];
+        Set<String> set = new HashSet<>();
 
+        for(int row=0; row<9; row++){
+            for(int col=0; col<9; col++){
+                char val = board[row][col];
                 if(val != '.'){
-                    int square = (3 * (r/3)) + (c/3);
+                    int square = (3 * (row/3)) + (col/3);
 
-                    if(set.contains("r" + r + val) ||
-                        set.contains("c" + c + val) ||
+                    if(set.contains("r" + row + val) ||
+                        set.contains("c" + col + val) ||
                         set.contains("sq" + square + val)
-                    ){
-                        return false;
-                    }
+                        ){
+                            return false;
+                        }
                     else{
-                        set.add("r" + r + val);
-                        set.add("c" + c + val);
+                        set.add("r" + row + val);
+                        set.add("c" + col + val);
                         set.add("sq" + square + val);
                     }
                 }
