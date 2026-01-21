@@ -1,12 +1,75 @@
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         
-        /* Approach 2: Better Approach: 
-            Optimize the space complexity by getting rid of the third array (mergedArr) to store sorted elements
-
+        /* Approach 3: Optimized Approach: Binary Search
             TC: O()
             SC: O()
         */
+
+        int n = nums1.length;
+        int m = nums2.length;
+
+        // Perform the binary search approach on the smaller sized array to reduce time complexity
+        if(n > m){
+            findMedianSortedArrays(nums2, nums1);
+        }
+
+        int size = n + m;
+
+        // Number of elements required on the left half array
+        int left = (n + m + 1)/2;
+
+        int low = 0, high = n;
+
+        while(low <= high){
+            int mid1 = low + (high - low)/2;
+            int mid2 = left - mid1;
+
+            int l1 = Integer.MIN_VALUE;
+            int l2 = Integer.MIN_VALUE;
+
+            int r1 = Integer.MAX_VALUE;
+            int r2 = Integer.MAX_VALUE;
+
+            if(mid1 < n){
+                r1 = nums1[mid1];
+            }
+            if(mid2 < m){
+                r2 = nums2[mid2];
+            }
+            if(mid1 - 1 >=0){
+                l1 = nums1[mid1 - 1];
+            }
+            if(mid2 - 1 >= 0){
+                l2 = nums2[mid2 - 1];
+            }
+
+            if(l1 <= r2 && l2 <= r1){
+                if(size % 2 == 1){
+                    return Math.max(l1, l2);
+                }
+                else{
+                    return (double)(Math.max(l1, l2) + Math.min(r1, r2) )/2.0;
+                }
+            }
+            else if(l1 > r2){
+                high = mid1 - 1;
+            }
+            else{
+                low = mid1 + 1;
+            }
+        }
+
+        return 0;
+
+        
+        
+        /* Approach 2: Better Approach: 
+            Optimize the space complexity by getting rid of the third array (mergedArr) to store sorted elements
+
+            TC: O(n+m)
+            SC: O(1)
+
 
         int n = nums1.length;
         int m = nums2.length;
@@ -75,6 +138,7 @@ class Solution {
         }
 
         return (double)( (ind1Element + ind2Element)/2.0);
+        */
 
         
         /* Approach 1: Brute Force : Merge nums1 & nums2 inta a new array
