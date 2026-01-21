@@ -11,7 +11,7 @@ class Solution {
 
         // Perform the binary search approach on the smaller sized array to reduce time complexity
         if(n > m){
-            findMedianSortedArrays(nums2, nums1);
+            return findMedianSortedArrays(nums2, nums1);
         }
 
         int size = n + m;
@@ -37,7 +37,7 @@ class Solution {
             if(mid2 < m){
                 r2 = nums2[mid2];
             }
-            if(mid1 - 1 >=0){
+            if(mid1 - 1 >= 0){
                 l1 = nums1[mid1 - 1];
             }
             if(mid2 - 1 >= 0){
