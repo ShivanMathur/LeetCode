@@ -1,6 +1,6 @@
 class Solution {
     public int uniquePaths(int m, int n) {
-        /* DP: Memoization Approach */
+        /* DP: Memoization Approach
         int[][] dp = new int[m][n];
 
         return uniquePathsHelper(m-1, n-1, dp); */
