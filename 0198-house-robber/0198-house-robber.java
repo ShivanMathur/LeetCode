@@ -1,73 +1,82 @@
 class Solution {
     public int rob(int[] nums) {
-        /* DP: Memoization 
-        TC: O(N)
-        SC: O(N) + O(N)
-        int[] dp = new int[nums.length];
-        Arrays.fill(dp, -1);
-        return rob(nums, nums.length - 1, dp); */
+        
+        /* Approach 3: DP - Tabulation
+            TC: O(n)
+            SC: O(n)
+        */
 
-        /* DP: Tabulation 
-        TC: O(N)
-        SC: O(N) 
-        int[] dp = new int[nums.length];
-        dp[0] = nums[0];
+        int n = nums.length;
+        int[] dpTab = new int[n];
+        
+        dpTab[0] = nums[0];
 
-        for(int i=1; i<nums.length; i++){
+        for(int i=1; i<n; i++){
             int pick = nums[i];
-            if(i>1){
-                pick += dp[i-2];
+            if(i > 1){
+                pick += dpTab[i-2];
             }
+            int notpick = dpTab[i-1];
 
-            int notpick = dp[i-1];
-
-            dp[i] = Math.max(pick, notpick);
+            dpTab[i] = Math.max(pick, notpick);
         }
 
-        return dp[nums.length-1]; */
+        return dpTab[n-1];
 
-        /* DP: Space Optimization 
-        TC: O(N)
-        SC: O(1) */
 
-        int prev = nums[0];
-        int prev2 = 0;
+        
+        /* Approach 2: DP - Memoization
+            TC: O(n)
+            SC: O(n) + O(n)
 
-        int[] dp = new int[nums.length];
+        
+        int n = nums.length;
+        int[] dpMemo = new int[n];
+        Arrays.fill(dpMemo, -1);
 
-        for(int i=1; i<nums.length; i++){
-            int pick = nums[i];
-            if(i>1){
-                pick += prev2;
-            }
+        return robDPMemo(n - 1, nums, dpMemo);
+        */
+        
+        /* Approach 1: Recursion
+            TC: O(2^n)
+            SC: O(n)
 
-            int notpick = prev;
-
-            int curr = Math.max(pick, notpick);
-
-            prev2 = prev;
-            prev = curr;
-        }
-
-        return prev;
+        return robRecursion(nums.length - 1, nums);
+        */
     }
 
-    private int rob(int[] nums, int index, int[] dp){
-        if(index < 0){
-            return 0;
-        }
+    private int robDPMemo(int index, int[] nums, int[] dpMemo){
         if(index == 0){
             return nums[index];
         }
-
-        if(dp[index] != -1){
-            return dp[index];
+        if(index < 0){
+            return 0;
         }
 
-        int pick = nums[index] + rob(nums, index-2, dp);
-        int notpick = rob(nums, index-1, dp);
+        if(dpMemo[index] != -1){
+            return dpMemo[index];
+        }
 
-        dp[index] = Math.max(pick, notpick);
-        return dp[index];
+        int pick = nums[index] + robDPMemo(index - 2, nums, dpMemo);
+        int notpick = robDPMemo(index-1, nums, dpMemo);
+
+        dpMemo[index] = Math.max(pick, notpick);
+
+        return dpMemo[index];
+    }
+
+    private int robRecursion(int index, int[] nums){
+
+        if(index == 0){
+            return nums[index];
+        }
+        if(index < 0){
+            return 0;
+        }
+
+        int pick = nums[index] + robRecursion(index - 2, nums);
+        int notpick = robRecursion(index - 1, nums);
+
+        return Math.max(pick, notpick);
     }
 }
