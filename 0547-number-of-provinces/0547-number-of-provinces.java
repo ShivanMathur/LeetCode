@@ -1,28 +1,39 @@
 class Solution {
     public int findCircleNum(int[][] isConnected) {
-        /*
-            TC: O(N){Iterating ofr all cities} + O(V + 2E){DFS traversal for all the nodes}
-            SC: O(N){Visited} + O(N){Recusrion Stack}
-        */
-        int[] visited = new int[isConnected.length];
+        
+        // Create Adjacency List
+        int n = isConnected.length;
+        ArrayList<ArrayList<Integer>> adjList = new ArrayList<ArrayList<Integer>>();
+
+        for(int i=0; i<n; i++){
+            adjList.add(new ArrayList<>());
+            for(int j=0; j<n; j++){
+                if( i != j && isConnected[i][j] == 1){
+                    adjList.get(i).add(j);
+                }
+            }
+        }
+
+        int[] visited = new int[n];
         int provinces = 0;
 
-        for(int city=0; city<isConnected.length; city++){
+        for(int city=0; city<n; city++){
             if(visited[city] == 0){
-                dfs(isConnected, visited, city);
                 provinces++;
+                dfs(city, visited, adjList);
             }
         }
 
         return provinces;
     }
 
-    public void dfs(int[][] isConnected, int[] visited, int city){
+    private void dfs(int city, int[] visited, ArrayList<ArrayList<Integer>> adjList){
         visited[city] = 1;
-        for(int neighbour=0; neighbour<isConnected[0].length; neighbour++){
-            if(visited[neighbour] != 1 && isConnected[city][neighbour] == 1){
-                dfs(isConnected, visited, neighbour);
+        for(int neighbour : adjList.get(city)){
+            if(visited[neighbour] == 0){
+                dfs(neighbour, visited, adjList);
             }
         }
+
     }
 }
