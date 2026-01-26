@@ -16,7 +16,10 @@
 class Solution {
     public int maxDepth(TreeNode root) {
 
-        /* BFS Approach */
+        /* Level Order Approach: BFS
+            TC: O(n)
+            SC: O(n)
+        
 
         if(root == null){
             return 0;
@@ -29,7 +32,7 @@ class Solution {
 
         while(!queue.isEmpty()){
             int size = queue.size();
-            while(size -- > 0){
+            for(int i=0; i<size; i++){
                 TreeNode node = queue.poll();
                 if(node.left != null){
                     queue.add(node.left);
@@ -41,6 +44,22 @@ class Solution {
             depth++;
         }
 
-        return depth;      
+        return depth;
+        */
+
+        /* Recursion Approach: DFS
+            TC: O(n)
+            SC: O(n)
+        */
+
+        if(root == null){
+            return 0;
+        }
+
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+
+        return 1 + Math.max(left, right);
+        
     }
 }
