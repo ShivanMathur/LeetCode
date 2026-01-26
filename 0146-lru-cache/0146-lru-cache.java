@@ -1,7 +1,8 @@
 class LRUCache {
 
     /* Brute Force Approach
-    */
+    TC: O(n) for each put() and get() operation
+    SC: O(n)
 
     private ArrayList<int[]> cache;
     private int capacity;
@@ -53,22 +54,90 @@ class LRUCache {
         // Add it to the cache ArrayList
         cache.add(new int[]{key, value});
     }
+    */
 
     /*
+    Doubly Linked List Approach
+    */
+
+    class DLLNode{
+        int key;
+        int val;
+        DLLNode next;
+        DLLNode prev;
+
+        DLLNode(int key, int val){
+            this.key = key;
+            this.val = val;
+            this.next = null;
+            this.prev = null;
+        }
+    }
+
+    DLLNode head = new DLLNode(-1, -1);
+    DLLNode tail = new DLLNode(-1, -1);
+
+    int capacity;
+    HashMap<Integer, DLLNode> cache;
 
     public LRUCache(int capacity) {
-        
+        this.capacity = capacity;
+        cache = new HashMap<>();
+
+        head.next = tail;
+        tail.prev = head;        
+    }
+
+    public void insertion(DLLNode node){
+        DLLNode temp = head.next;
+        node.next = temp;
+        node.prev = head;
+
+        head.next = node;
+        temp.prev = node;  
+    }
+
+    public void deletion(DLLNode node){
+        DLLNode front = node.next;
+        DLLNode back = node.prev;
+
+        back.next = front;
+        front.prev = back;
     }
     
     public int get(int key) {
-        
+        if(cache.containsKey(key)){
+            DLLNode node = cache.get(key);
+            int val = node.val;
+
+            cache.remove(key);
+            deletion(node);
+            insertion(node);
+
+            cache.put(key, head.next);
+            return val;
+        }
+
+        return -1;
     }
     
     public void put(int key, int value) {
-        
-    }
+        if(cache.containsKey(key)){
+            DLLNode node = cache.get(key);
 
-    */
+            cache.remove(key);
+
+            deletion(node);
+        }
+
+        if(cache.size() == capacity){
+            cache.remove(tail.prev.key);
+            deletion(tail.prev);
+        }
+
+        insertion(new DLLNode(key, value));
+        cache.put(key, head.next);
+    }
 }
 
 /**
