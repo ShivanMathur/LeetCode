@@ -1,13 +1,32 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        /* Approach 2: Sliding Window + Two Pointer
-            TC: O(n)
-            SC: O(m); m: Total number of unique characters in the string
+        /* 2. Sliding Window (Optimized)
+            TC: O(N)
+            SC: O(M) ; M: Total number of unique characters in the string 
         */
 
-        HashSet<Character> set = new HashSet<>();
+        int maxLength = 0;
+        int left = 0, right = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        while(right < s.length()){
+            if(map.containsKey(s.charAt(right))){
+                left = Math.max(left, map.get(s.charAt(right)) + 1);
+            }
+            map.put(s.charAt(right), right);
+            maxLength = Math.max(maxLength, right - left + 1);
+            right++;
+        }
+
+        return maxLength;
+        
+        /* 1. Sliding Window
+            TC: O(N)
+            SC: O(M) ; M: Total number of unique characters in the string 
 
         int left = 0, right = 0;
+        Set<Character> set = new HashSet<>();
+
         int maxLength = 0;
 
         while(right < s.length()){
@@ -16,28 +35,8 @@ class Solution {
                 left++;
             }
             set.add(s.charAt(right));
+            maxLength = Math.max(maxLength, right - left + 1);
             right++;
-
-            maxLength = Math.max(maxLength, right - left);
-        }
-
-        return maxLength;
-
-        /* Approach 1: Brute Force - Generate all possible substrings
-            TC: O(n^2)
-            SC: O(n)
-        
-
-        int maxLength = 0;
-        for(int i=0; i<s.length(); i++){
-            int[] freq = new int[256];
-            for(int j=i; j<s.length(); j++){
-                if(freq[s.charAt(j)] == 1){
-                    break;
-                }
-                maxLength = Math.max(maxLength, j - i + 1);
-                freq[s.charAt(j)] = 1;
-            }
         }
 
         return maxLength;
